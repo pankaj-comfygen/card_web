@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<html lang="ar" dir="rtl">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: "Beiruti", serif;
+    }
+</style>
+
+<body>
+
+    <header class=" sticky bg-white w-full top-0 z-20 transition duration-300 ease-in-out h-20 shadow-sm">
+        <header class="flex justify-between items-center h-20 mx-auto px-4 md:px-10 2xl:px-0 w-full  xl:container ">
+            <a href="/index.html" class="2xl:text-3xl text-[1.9rem] text-2xl font-black text-[#000] skipTranslation">
+                البركة
+            </a>
+            <nav class="lg:flex hidden flex-row gap-6 items-center text-lg ">
+                <a href="/index.html" class="text-[#B9A06A] font-semibold px-4">الرئيسية</a>
+                <a href="#effyAISuite" id="effyAISuiteLink" class="px-4">حول</a>
+                <a href="#effyAISuite" id="effyAISuiteLink" class="px-4">كرت</a>
+                <a href="/index.html" class="px-4">المدونة</a>
+                <a href="/partners-with-effy.html" class="px-4">الاتصال</a>
+
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#contactFrom"
+                    class="px-6 py-2.5  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-center items-center lg:flex hidden cursor-pointer text-[#4E4320] font-medium">
+                    احصل على بطاقتك اليوم
+                </a>
+                <button onclick="toggleVisibility()" class="lg:hidden block p-2 bg-[#212121] text-white rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 6l16 0"></path>
+                        <path d="M4 12l16 0"></path>
+                        <path d="M4 18l16 0"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="content"
+                class="top-0 absolute right-0 w-full bg-white space-y-4 p-6 text-lg h-screen fixed hidden z-20">
+                <div class="flex justify-between items-center pb-6">
+                    <h1 class="text-2xl font-semibold">Menu</h1>
+                    <button onclick="toggleVisibility()"
+                        class="w-10 h-10 rounded-full border border-[#212121] flex items-center justify-center"><svg
+                            xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M18 6l-12 12"></path>
+                            <path d="M6 6l12 12"></path>
+                        </svg></button>
+                </div>
+                <a href="/index.html" class="w-full">Home</a>
+                <div class=" ">
+                    <div class="flex flex-row items-center gap-4 cursor-pointer justify-between">
+                        <span>
+                            Our Solutions
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down"
+                            width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M6 9l6 6l6 -6"></path>
+                        </svg>
+                    </div>
+                    <div class="text-[#212121]  pt-2 ">
+                        <a href="/ai-cloud.html" class="p-2 px-4 w-full block">effyAI Cloud</a>
+                        <a href="/content-cloud.html" class="p-2 px-4 w-full block">effyContent Cloud</a>
+                        <a href="/marketing-cloud.html" class="p-2 px-4 w-full block">effyMarketing Cloud</a>
+                        <a href="/sales-cloud.html" class="p-2 px-4 w-full block">effySales Cloud</a>
+                        <a href="/people-cloud.html" class="p-2 px-4 w-full block">effyPeople Cloud</a>
+                    </div>
+                </div>
+                <!-- <a href="/index.html" class="w-full block">Pricing</a> -->
+                <a href="/ai-cloud.html#effyAISuite" class="block">effyAI Suite</a>
+                <a href="/index.html" class="w-full block">Resources</a>
+                <!-- <a href="/index.html" class="w-full block">Support</a> -->
+                <a href="/partners-with-effy.html" class="w-full block">Partner with effyBiz</a>
+                <div onclick="toggleVisibility()" class="flex items-center space-x-4 pt-6">
+                    <a href="#contactFrom"
+                        class="px-6 py-3 bg-[#212121] hover:bg-neutral-700 transition-all duration-150 rounded-md justify-center items-center w-full  text-center   cursor-pointer text-white font-medium">
+                        Get In Touch
+                    </a>
+
+                </div>
+
+            </div>
+        </header>
+
+    </header>
+
+    <div class="flex flex-col bg-[#FFFAF5]  ">
+        <div class="mx-auto px-4 md:px-10 2xl:px-0 w-full overflow-hidden xl:container ">
+            <div
+                class="text-white w-full flex lg:flex-row flex-col-reverse  justify-center items-center gap-12 xl:py-16 py-10 ">
+
+                <div class="space-y-4   w-full">
+                    <img src="./img/Sparkle.svg" class="w-10 h-10" />
+                    <p class="text-[#B9A06A] tracking-widest font-semibold text-2xl">
+                        البداية نحو التوفير
+                    </p>
+                    <h1
+                        class="text-[#06241B] 2xl:text-5xl 2xl:leading-[4rem] lg:text-4xl lg:leading-[3rem]  leading-[2.5rem] text-3xl font-bold    ">
+                        مرحبًا بكم في عالم التوفير مع بطاقة البركة</h1>
+                    <p class="text-[#06241B] md:text-2xl text-base">استمتع بخصومات تصل إلى 50% على منتجاتك المفضلة
+                        والمزيد.
+                        عايش تجربتك الحياتية بكل أريحية واستفد من أكبر خصومات السوق.</p>
+                    <p class="text-[#6D737A] md:text-xl text-base">التوفير والمتعة يجتمعان في حياتكم التقاعدية، لأن
+                        البركة فيكم</p>
+                    <div data-aos="fade-up"
+                        class="flex md:flex-row flex-col justify-start md:gap-6 gap-4 2xl:text-base text-sm 2xl:pt-0 pt-4 aos-init aos-animate">
+                        <a href="#ExploreOurSolutions"
+                            class="px-6 py-3 bg-[#212121] hover:bg-black transition-all duration-150 rounded-full justify-center items-center flex cursor-pointer text-white font-semibold uppercase">
+                            احصل على بطاقتك اليوم
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-md p-4 flex items-center space-x-4 w-fit mt-4">
+                        <div class="w-12 h-12 bg-[#E9F8F3] flex items-center justify-center text-[#FFC27A]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-star">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
+                            </svg>
+                        </div>
+                        <p class="text-[#52565C] text-xl">5.0 تقييم</p>
+                       
+
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img src="./img/heroimg.png" class="lg:w-9/12 mr-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
