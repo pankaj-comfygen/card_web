@@ -36,6 +36,24 @@
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
+    .five-carousel{
+        background-color:#FDF8F3;
+       
+    }
+    .sliderInfinite {
+      display: flex;
+      gap: 20px;
+      animation: scroll 10s linear infinite; 
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
 </style>
 
 <body dir="rtl">
@@ -168,28 +186,33 @@
         </div>
     </div>
 
-    <div id="carousel-container" class="carousel-container max-w-6xl mx-auto px-4">
-        <!-- Header -->
-        <div class="carousel-header flex flex-col text-center mb-8">
+    <div class="overflow-hidden bg-[#444343] py-6">
+        <div class="sliderInfinite flex items-center">
+        
+        </div>
+      </div>
+
+    <div id="carousel-container" class="carousel-container  mx-auto px-4 five-carousel p-6">
+       
+        <div class="carousel-header flex flex-col text-start px-4 mb-8">
           <h2 class="text-2xl font-bold text-green-800">شركاؤنا</h2>
           <p class="text-gray-600 mt-2">
             شركاؤنا في التميز نفتخر بشراكتنا مع أفضل العلامات والمتاجر
           </p>
         </div>
-    
-        <!-- Carousel -->
+   
         <div class="carousel flex gap-6 overflow-x-auto scrollbar-hide">
-          <!-- Cards will be rendered here -->
+         
         </div>
-    
-        <!-- Navigation -->
         <div class="flex justify-center mt-6 gap-4">
-          <button onclick="scrollCarousel(-1)" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300">
-            &lt;
-          </button>
-          <button onclick="scrollCarousel(1)" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300">
-            &gt;
-          </button>
+            <div class=" flex justify-center mt-4 text-white">
+                <button nclick="scrollCarousel(-1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                    <i class="bi bi-chevron-right text-white"></i>
+                </button>
+                <button onclick="scrollCarousel(1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+            </div>
         </div>
       </div>
 

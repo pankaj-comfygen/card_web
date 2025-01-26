@@ -62,6 +62,32 @@ const carouselData = [
   ];
 
 
+  const logos = [
+    { name: "Netflix", img: "https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg" },
+    { name: "Prime Video", img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" },
+    { name: "Hulu", img: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg" },
+    { name: "Disney+", img: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" },
+    { name: "HBO Max", img: "https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" },
+  ];
+
+  const sliderInfinite = document.querySelector('.sliderInfinite');
+  function renderLogos() {
+    sliderInfinite.innerHTML = logos
+      .map(logo => `
+        <div class="min-w-[120px] flex-shrink-0 p-4 flex items-center justify-center">
+          <img src="${logo.img}" alt="${logo.name}" class="h-12 object-contain">
+        </div>
+      `)
+      .join('');
+
+    // Clone the logos for infinite scrolling effect
+    sliderInfinite.innerHTML += sliderInfinite.innerHTML;
+  }
+
+  // Initialize the Slider
+  renderLogos();
+
+
 const slider = document.getElementById("testimonial-slider");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
@@ -70,13 +96,12 @@ let currentIndex = 0;
 
 function renderTestimonials() {
     slider.innerHTML = testimonials
-        .map(
-            (t) => `
+        .map((t) => `
           <div class="bg-white  p-6 rounded-lg  flex flex-col items-start text-start w-96 relative">
-          <i class="fa-solid fa-quote-right absolute top-3 left-4 text-[#B9A06A]"></i>
+          <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
           <div class='flex justify-start item-center  gap-3'>
           <img
-              src="${t.image}"
+              src="${t?.image}"
               alt="${t.name}"
               class="w-14 h-14 rounded-full mb-4"
             />
@@ -117,7 +142,7 @@ updateSlider();
 function renderCarousel() {
     const carousel = document.querySelector('.carousel');
     carousel.innerHTML = carouselData.map(item => `
-      <div class="min-w-[200px] bg-white rounded-2xl shadow-sm flex flex-col items-center p-4">
+      <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
         <img src="${item.img}" alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
         <p class="text-lg font-bold">${item.title}</p>
         <p class="text-gray-500 text-sm mt-2">${item.desc}</p>
