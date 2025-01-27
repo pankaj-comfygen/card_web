@@ -19,6 +19,27 @@ const testimonials = [
     feedback:
       "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
     image: "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+  },
+  {
+    name: "أحمد سعيد",
+    title: "عميل لشركة الراحة",
+    feedback:
+      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+    image: "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+  },
+  {
+    name: "أحمد سعيد",
+    title: "عميل لشركة الراحة",
+    feedback:
+      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+    image: "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+  },
+  {
+    name: "أحمد سعيد",
+    title: "عميل لشركة الراحة",
+    feedback:
+      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+    image: "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
   }
 ];
 
@@ -121,23 +142,37 @@ function renderTestimonials() {
 
 
 function updateSlider() {
+  const viewportWidth = window.innerWidth;
+  const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
   const sliderWidth = slider.scrollWidth / testimonials.length;
   slider.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
 }
 
+
+
 prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  const viewportWidth = window.innerWidth;
+  const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
+
+  currentIndex = Math.max(currentIndex - 1, 0);
   updateSlider();
 });
 
 nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % testimonials.length;
+  const viewportWidth = window.innerWidth;
+  const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
+
+  currentIndex = Math.min(
+    currentIndex + 1,
+    testimonials.length - itemsToShow
+  );
   updateSlider();
 });
 
+window.addEventListener("resize", updateSlider);
+
 renderTestimonials();
 updateSlider();
-
 
 
 function renderCarousel() {
