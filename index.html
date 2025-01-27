@@ -75,13 +75,13 @@
 
     #testimonial-slider>div {
         min-width: 100%;
-        
+
     }
 
     @media (min-width: 1024px) {
         #testimonial-slider>div {
             min-width: calc(100% / 3);
-          
+
         }
     }
 
@@ -137,6 +137,22 @@
     .swiper-pagination-bullet-active {
         background-color: black;
     }
+
+    .backgroundImage {
+        background-image: url("img/imgpsh_fullsize_anim.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .gradient-bg {
+        background: linear-gradient(to left, #B9A06A, #413620);
+    }
+</style>
+
+
 </style>
 
 <body dir="rtl">
@@ -268,6 +284,8 @@
             </div>
         </div>
     </div>
+    <!-- infine slider ------->
+
 
     <div class="overflow-hidden bg-[#444343] py-6">
         <div class="sliderInfinite flex items-center">
@@ -275,7 +293,54 @@
         </div>
     </div>
 
-    <div id="carousel-container" class="carousel-container  mx-auto px-4 five-carousel p-6">
+    <!-- infine slider ------->
+    <div class="gradient-bg  w-full flex justify-between place-content-center items-center p-4">
+        <div>
+            pankaj
+        </div>
+        <div
+        class=" flex justify-center">
+            <img src="img\imgpsh_fullsize_anim (1).png" class="w-[60%]" />
+        </div>
+
+    </div>
+
+
+    <div class="flex flex-col  backgroundImage ">
+        <div class="mx-auto px-4 md:px-10 2xl:px-0 w-full overflow-hidden xl:container ">
+            <div
+                class="text-white w-full flex lg:flex-row flex-col-reverse  justify-center items-center gap-12 xl:py-16 py-10 ">
+
+                <div class="space-y-4   w-full">
+
+                    <p class="text-[#06241B] tracking-widest font-semibold ">
+                        بطاقة البركة
+                    </p>
+
+                    <p class="text-[#06241B]  text-base">
+                        توفير واستفادة لكل متقاعد، لأن البركة فيكم وتستحقون الأفضل</p>
+                    <p class="text-[#6D737A]  text-base max-w-xl">
+                        التوفير الذي تستحقه عش حياتك بكل رفاهية واستمتع بخصومات تصل إلى 50%
+                        على المنتجات والخدمات التي تحبها لأن البركة فيكم، نستثمر في راحة بالكم،
+                        استفدوا من خدمات حصرية وعروض لا تُفوَّت<br><span class="text-[#01A171]">لا تفوِّت فرصة التوفير
+                            والتمتع بالحياة</span>
+                    </p>
+                    <p class="text-[#BAA26E]  text-base max-w-xl">
+                        لا تفوِّت فرصة التوفير والتمتع بالحياة
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="carousel-container" class="carousel-container  mx-auto px-4 five-carousel p-6 py-20">
 
         <div class="carousel-header flex flex-col text-start px-4 mb-8">
             <h2 class="text-2xl font-bold text-green-800">شركاؤنا</h2>
@@ -326,7 +391,7 @@
     </div>
 
 
-   
+
 
 
 
