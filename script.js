@@ -265,8 +265,7 @@ updateCarousel();
 
 
 function toggleVisibility() {
- 
   const sidebar = document.getElementById("content");
   sidebar.classList.toggle("hidden");
-  sidebar.classList.toggle("-translate-x-full");
+  sidebar.classList.toggle("translate-x-full"); // Toggle translate-x-full to slide it in
 }
