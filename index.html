@@ -147,8 +147,16 @@
         height: 100vh;
     }
 
+    .cardBackground{
+        background-image: url("img\imgpsh_fullsize_anim (2).png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     
+    }
+
     .gradient-bg {
-        background: linear-gradient(to left, #B9A06A, #413620);
+        background: linear-gradient(to left, #B9A06A, #605134);
     }
 </style>
 
@@ -294,13 +302,31 @@
     </div>
 
     <!-- infine slider ------->
-    <div class="gradient-bg  w-full flex justify-between place-content-center items-center p-4">
-        <div>
-            pankaj
+    <div class="gradient-bg  w-full flex md:flex-row flex-col justify-between place-content-center items-center p-20 relative">
+        <div class="max-w-[400px] text-sm  absolute top-40 left-[50%]">
+            <h2 class="text-2xl font-bold text-[2A2A]">
+                بطاقة البركة للخصومات
+            </h2>
+            <p class=" text-[4A4A4A] text-base max-w-xl">
+                التوفير الذي تستحقه عش حياتك بكل رفاهية واستمتع بخصومات تصل إلى 50%
+                على المنتجات والخدمات التي تحبها لأن البركة فيكم، نستثمر في راحة بالكم،
+                استفدوا من خدمات حصرية وعروض لا تُفوَّت
+            </p>
+            <div class="p-2">
+                <button class="px-7 py-2 rounded border text-[2A2A2A] ">
+                    اشترك الان
+                </button>
+            </div>
+
         </div>
-        <div
-        class=" flex justify-center">
-            <img src="img\imgpsh_fullsize_anim (1).png" class="w-[60%]" />
+        <div class="flex justify-center">
+            <img src="img\imgpsh_fullsize_anim (2).png" class="w-[60%]"/>
+
+        </div>
+
+
+        <div class="w-full md:w-[50%] flex justify-center">
+            <img src="img\imgpsh_fullsize_anim (1).png" class=" w-full md:w-[80%]" />
         </div>
 
     </div>
@@ -320,7 +346,7 @@
                     <p class="text-[#06241B]  text-base">
                         توفير واستفادة لكل متقاعد، لأن البركة فيكم وتستحقون الأفضل</p>
                     <p class="text-[#6D737A]  text-base max-w-xl">
-                        التوفير الذي تستحقه عش حياتك بكل رفاهية واستمتع بخصومات تصل إلى 50%
+                        التوفير الذي تستحقه عش حياتك بكل رفاهية واستمتع بخصومات تصل إلى %
                         على المنتجات والخدمات التي تحبها لأن البركة فيكم، نستثمر في راحة بالكم،
                         استفدوا من خدمات حصرية وعروض لا تُفوَّت<br><span class="text-[#01A171]">لا تفوِّت فرصة التوفير
                             والتمتع بالحياة</span>
@@ -340,7 +366,7 @@
 
 
 
-    <div id="carousel-container" class="carousel-container  mx-auto px-4 five-carousel p-6 py-20">
+    <!-- <div id="carousel-container" class="carousel-container  mx-auto px-4 five-carousel p-6 py-20">
 
         <div class="carousel-header flex flex-col text-start px-4 mb-8">
             <h2 class="text-2xl font-bold text-green-800">شركاؤنا</h2>
@@ -354,7 +380,33 @@
         </div>
         <div class="flex justify-center mt-6 gap-4">
             <div class=" flex justify-center mt-4 text-white">
-                <button nclick="scrollCarousel(-1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                <button onclick="scrollCarousel(-1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                    <i class="bi bi-chevron-right text-white"></i>
+                </button>
+                <button onclick="scrollCarousel(1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <div id="carousel-container" class="carousel-container mx-auto px-4 five-carousel p-6 py-20">
+        <div class="carousel-header flex flex-col text-start px-4 mb-8">
+            <h2 class="text-2xl font-bold text-green-800">شركاؤنا</h2>
+            <p class="text-gray-600 mt-2">
+                شركاؤنا في التميز نفتخر بشراكتنا مع أفضل العلامات والمتاجر
+            </p>
+        </div>
+
+        <div class="carousel flex gap-6 overflow-x-auto scrollbar-hide">
+            <!-- Carousel items will be rendered here -->
+        </div>
+
+        <div class="flex justify-center mt-6 gap-4">
+            <div class="flex justify-center mt-4 text-white">
+                <button onclick="scrollCarousel(-1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
                     <i class="bi bi-chevron-right text-white"></i>
                 </button>
                 <button onclick="scrollCarousel(1)" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">

@@ -44,42 +44,13 @@ const testimonials = [
 ];
 
 const carouselData = [
-  {
-    title: "البركة",
-    desc: "Photography Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  },
-  {
-    title: "البركة",
-    desc: "UI-UX Design Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  },
-  {
-    title: "البركة",
-    desc: "Social Media Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  },
-  {
-    title: "البركة",
-    desc: "Business Idea Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  }
-  ,
-  {
-    title: "البركة",
-    desc: "Business Idea Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  },
-  {
-    title: "البركة",
-    desc: "Business Idea Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  },
-  {
-    title: "البركة",
-    desc: "Business Idea Expert",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-  }
+  { title: "البركة", desc: "Photography Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" },
+  { title: "البركة", desc: "UI-UX Design Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" },
+  { title: "البركة", desc: "Social Media Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" },
+  { title: "البركة", desc: "Business Idea Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" },
+  { title: "البركة", desc: "Business Idea Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" },
+  { title: "البركة", desc: "Business Idea Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" },
+  { title: "البركة", desc: "Business Idea Expert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" }
 ];
 
 
@@ -101,7 +72,7 @@ function renderLogos() {
       `)
     .join('');
 
-  // Clone the logos for infinite scrolling effect
+
   sliderInfinite.innerHTML += sliderInfinite.innerHTML;
 }
 
@@ -145,27 +116,16 @@ function updateSlider() {
   const viewportWidth = window.innerWidth;
   const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
   const sliderWidth = slider.scrollWidth / testimonials.length;
-  slider.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+  slider.style.transform = `translateX(-${(currentIndex % testimonials.length) * sliderWidth}px)`;
 }
 
-
-
 prevBtn.addEventListener("click", () => {
-  const viewportWidth = window.innerWidth;
-  const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
-
-  currentIndex = Math.max(currentIndex - 1, 0);
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
   updateSlider();
 });
 
 nextBtn.addEventListener("click", () => {
-  const viewportWidth = window.innerWidth;
-  const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
-
-  currentIndex = Math.min(
-    currentIndex + 1,
-    testimonials.length - itemsToShow
-  );
+  currentIndex = (currentIndex + 1) % testimonials.length;
   updateSlider();
 });
 
@@ -186,7 +146,6 @@ function renderCarousel() {
     `).join('');
 }
 
-// Toggle RTL/LTR
 function toggleDirection() {
   const html = document.documentElement;
   html.dir = html.dir === 'ltr' ? 'rtl' : 'ltr';
@@ -201,18 +160,5 @@ renderCarousel()
 
 
 
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper('.swiper-container', {
-    // Swiper parameters
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-});
+
+
