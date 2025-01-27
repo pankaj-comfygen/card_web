@@ -262,3 +262,11 @@ nextControl.addEventListener('click', () => {
 
 // Initialize carousel
 updateCarousel();
+
+
+function toggleVisibility() {
+ 
+  const sidebar = document.getElementById("content");
+  sidebar.classList.toggle("hidden");
+  sidebar.classList.toggle("-translate-x-full");
+}
