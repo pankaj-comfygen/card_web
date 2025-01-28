@@ -13,7 +13,7 @@ const testimonials = [
     feedback:
       "شكراً كثيراً لشركة الراحة على الخصومات الرائعة المقدمة، وجعلتم جانبي أفضل بتوفير المال على مستلزماتي اليومية بشكل لا يصدق! شكراً لكم!",
     image:
-      "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
+      "https://img-farida-gupta.com/media/catalog/product/full_image/3/_/3_160_149.jpg",
   },
   {
     name: "أحمد سعيد",
@@ -29,7 +29,7 @@ const testimonials = [
     feedback:
       "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
     image:
-      "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
+      "https://img-farida-gupta.com/media/catalog/product/full_image/3/_/3_160_149.jpg",
   },
   {
     name: "أحمد سعيد",
@@ -128,47 +128,99 @@ function renderLogos() {
 // Initialize the Slider
 renderLogos();
 
+
+/// testimonial---->>>>>>>>>
+// const slider = document.getElementById("testimonial-slider");
+// const prevBtn = document.getElementById("prev-btn");
+// const nextBtn = document.getElementById("next-btn");
+
 const slider = document.getElementById("testimonial-slider");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
+const bulletsContainer = document.getElementById("slider-bullets");
 
 let currentIndex = 0;
+const itemsToShow = 3;
+
+// function renderTestimonials() {
+//   slider.innerHTML = testimonials
+//     .map(
+//       (t) => `
+//           <div class="bg-white  p-6 rounded-lg  flex flex-col items-start text-start w-96 relative">
+//           <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+//           <div class='flex justify-start item-center  gap-3'>
+//           <img
+//               src="${t?.image}"
+//               alt="${t.name}"
+//               class="w-14 h-14 rounded-full mb-4"
+//             />
+//             <div>
+//              <h3 class="text-lg font-bold m">${t.name}</h3>
+//             <p class="text-sm text-gray-400 ">${t.title}</p>
+//             </div>
+           
+            
+//           </div>
+//             <blockquote class="text-gray-700 text-sm">${t.feedback}</blockquote>
+//           </div>
+//         `
+//     )
+//     .join("");
+// }
 
 function renderTestimonials() {
   slider.innerHTML = testimonials
     .map(
       (t) => `
-          <div class="bg-white  p-6 rounded-lg  flex flex-col items-start text-start w-96 relative">
-          <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
-          <div class='flex justify-start item-center  gap-3'>
+      <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+        <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+        <div class="flex justify-start items-center gap-3">
           <img
-              src="${t?.image}"
-              alt="${t.name}"
-              class="w-14 h-14 rounded-full mb-4"
-            />
-            <div>
-             <h3 class="text-lg font-bold m">${t.name}</h3>
-            <p class="text-sm text-gray-400 ">${t.title}</p>
-            </div>
-           
-            
+            src="${t.image}"
+            alt="${t.name}"
+            class="w-14 h-14 rounded-full mb-4"
+          />
+          <div>
+            <h3 class="text-lg font-bold">${t.name}</h3>
+            <p class="text-sm text-gray-400">${t.title}</p>
           </div>
-            <blockquote class="text-gray-700 text-sm">${t.feedback}</blockquote>
-          </div>
-        `
+        </div>
+        <blockquote class="text-gray-700 text-sm">${t.feedback}</blockquote>
+      </div>
+    `
     )
     .join("");
+    renderBullets();
 }
 
+function renderBullets() {
+  bulletsContainer.innerHTML = testimonials
+    .map((_, index) => {
+      const isActive = index === currentIndex ? "active" : "";
+      return `<button class="${isActive}" data-index="${index}"></button>`;
+    })
+    .join("");
+
+  // Add click events for bullets
+  document.querySelectorAll("#slider-bullets button").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      currentIndex = parseInt(e.target.dataset.index, 10);
+      updateSlider();
+    });
+  });
+}
+
+// Update Slider Position
 function updateSlider() {
-  const viewportWidth = window.innerWidth;
-  const itemsToShow = viewportWidth >= 1024 ? 3 : 1;
-  const sliderWidth = slider.scrollWidth / testimonials.length;
   slider.style.transform = `translateX(-${
-    (currentIndex % testimonials.length) * sliderWidth
+    currentIndex * (slider.offsetWidth / testimonials.length)
   }px)`;
+
+  // Update active bullet
+  renderBullets();
 }
 
+// Navigation Buttons
 prevBtn.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
   updateSlider();
@@ -179,8 +231,7 @@ nextBtn.addEventListener("click", () => {
   updateSlider();
 });
 
-window.addEventListener("resize", updateSlider);
-
+// Initialize Slider
 renderTestimonials();
 updateSlider();
 

@@ -163,6 +163,7 @@
         justify-content: start;
         margin-top: 20px;
         gap: 8px;
+        margin-right: 30px;
     }
 
     .carousel-indicator {
@@ -200,6 +201,38 @@
                 flex: 0 0 100%;
             }
         }
+
+
+.rtl #testimonial-slider {
+  direction: rtl;
+}
+
+.rtl .bi-chevron-left {
+  transform: rotate(180deg); 
+}
+#slider-bullets{
+    display: flex;
+        justify-content: start;
+        margin-top: 20px;
+        gap: 8px;
+        margin-right: 20px;
+}
+
+
+#slider-bullets button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#slider-bullets button.active {
+  background-color: #333;
+}
+
 </style>
 
 
@@ -351,7 +384,7 @@
 
     <div
         class="gradient-bg  w-full flex md:flex-row flex-col justify-start md:justify-between place-content-center items-center p-20 relative">
-        <div class="max-w-[400px] text-sm  absolute top-10 md:top-40 left-20 md:left-[50%]">
+        <div class="max-w-[400px] text-sm  absolute top-10 md:top-40 right-5 md:left-[50%]">
             <h2 class="text-2xl font-bold text-[2A2A]">
                 بطاقة البركة للخصومات
             </h2>
@@ -386,7 +419,6 @@
                 class="text-white w-full flex lg:flex-row flex-col-reverse  justify-center items-center gap-12 xl:py-16 py-10 ">
 
                 <div class="space-y-4   w-full">
-
                     <p class="text-[#06241B] tracking-widest font-semibold ">
                         بطاقة البركة
                     </p>
@@ -418,7 +450,7 @@
 
     <!-------------------carsuel -------------------->
 
-    <div class="carousel-wrapper p-10">
+    <div class="carousel-wrapper p-2 py-20">
         <h2 class="text-2xl font-bold text-start px-5">شركاؤنا</h2>
         <img src="img\Vector 5.png" class="w-20  ms-4" />
         <p class="text-start text-gray-500 pb-10 px-5 pt-3">
@@ -506,7 +538,7 @@
 
     <!-- slider searction -->
 
-    <div id="testimonial-section" class="slider_seaction ">
+    <!-- <div id="testimonial-section" class="slider_seaction "> 
         <div class="container mx-auto px-4 bg-gray-200 p-5">
             <h2 class="text-2xl font-bold text-start  px-5">تعليقات العملاء</h2>
             <img src="img\Vector 7.png" class="w-30  ms-4" />
@@ -522,21 +554,59 @@
 
             </div>
             <div class=" flex justify-center mt-4 text-white">
-                <button id="prev-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                <button id="next-btn"  class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
                     <i class="bi bi-chevron-right text-white"></i>
                 </button>
-                <button id="next-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                <button  id="prev-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
                     <i class="bi bi-chevron-left"></i>
                 </button>
             </div>
         </div>
     </div>
+ -->
 
 
 
 
+ <div id="testimonial-section" class="slider_section rtl">
+    <div class="container mx-auto px-4 bg-gray-200 p-5">
+      <h2 class="text-2xl font-bold text-start px-5">تعليقات العملاء</h2>
+      <img src="img\Vector 7.png" class="w-30 ms-4" />
+      <p class="text-start text-gray-500 pb-10 px-5 pt-3">
+        تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية لعملائنا
+        الكرام.
+      </p>
+      <div class="relative">
+        <!-- Slider Container -->
+        <div class="overflow-hidden">
+          <div
+            id="testimonial-slider"
+            class="flex gap-4 transition-transform duration-500 ease-in-out"
+          ></div>
+        </div>
+        <!-- Bullets -->
+        <div id="slider-bullets" class="flex justify-center mt-4"></div>
+      </div>
+      <!-- Navigation Buttons -->
+      <div class="flex justify-center mt-4 text-white">
+        <button
+          id="prev-btn"
+          class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300"
+        >
+        <i class="bi bi-chevron-right text-white"></i>
 
+        </button>
+        <button
+          id="next-btn"
+          class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300"
+        >
+        <i class="bi bi-chevron-left text-white"></i>
 
+        </button>
+      </div>
+    </div>
+  </div>
+  
 
 
 
@@ -602,6 +672,9 @@
             </div>
         </div>
     </footer>
+
+
+    
 
 
     <script src="script.js">
