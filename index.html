@@ -95,6 +95,21 @@
         background-color: aliceblue;
 
     }
+
+    .scroll-container {
+      animation: scrollLeft 10s linear infinite;
+    }
+
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(10%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    
 </style>
 
 
@@ -235,12 +250,36 @@
     </div>
     <!-- infine slider ------->
 
-
     <div class="overflow-hidden bg-[#444343] py-6">
+        <div class="flex scroll-container ">
+          <!-- Images (Add your 8 images here) -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg" alt="Image 1" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Image 2" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Image 3" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="Image 4" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Image 5" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Image 6" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg" alt="Image 7" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="Image 8" class="h-12 object-contain object-cover mx-2">
+    
+        
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="Image 1" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Image 2" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg" alt="Image 3" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="Image 4" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Image 5" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="Image 6" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg" alt="Image 7" class="h-12 object-contain object-cover mx-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="Image 8" class="h-12 object-contain object-cover mx-2">
+        </div>
+      </div>
+
+
+    <!-- <div class="overflow-hidden bg-[#444343] py-6">
         <div class="sliderInfinite flex items-center">
 
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -617,6 +656,9 @@
             </div>
         </div>
     </footer>
+
+
+
 
 
 
