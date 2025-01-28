@@ -354,7 +354,7 @@
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        
+
     }
 
     .review-text {
@@ -368,7 +368,7 @@
 
     .carousel-dots {
         display: flex;
-        justify-content:start;
+        justify-content: start;
         gap: 8px;
         margin-top: 20px;
         margin-right: 20px;
@@ -629,127 +629,106 @@
 
     <!-------------------carsuel -------------------->
 
-    <div class="carousel-wrapper p-2 py-20">
-        <h2 class="text-2xl font-bold text-start px-5">شركاؤنا</h2>
-        <img src="img\Vector 5.png" class="w-20  ms-4" />
-        <p class="text-start text-gray-500 pb-10 px-5 pt-3">
-            شركاؤنا في التميز نفخر بشراكتنا مع نخبة من أفضل العلامات والمتاجر لتقديم خصومات وعروض مذهلة لحاملي بطاقة
-            البركة، مما يعزز تجربتهم ويضمن رضاهم. </p>
-        <div class="carousel-track">
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="img\https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
+
+
+    <div class="px-4 py-8 bg-[#f4f1e7]">
+        <div class="max-w-full-xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-right px-4">تعليقات العملاء</h2>
+            <p class="text-gray-600 text-right px-4 py-3">تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية
+                لعملائنا الكرام.</p>
+
+            <div class="relative overflow-hidden py-5">
+                <div class="flex transition-transform duration-500 ease-in-out gap-4" id="testimonialSlider">
+                    <div class="flex w-full md:w-1/4 bg-white  rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-[200px] h-40 text-center">
+                            <div className="w-full  bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold  ">البركة</h3>
+                            <p className="text-gray-500 text-sm bg-red-500">Photography Expert</p>
+                        </div>
+
+                    </div>
+                    <div class="flex-none w-full md:w-1/4 bg-white p-5 rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-64 text-center">
+                            <div className="w-full h-40 bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold text-black">البركة</h3>
+                            <p className="text-gray-500 text-sm">Photography Expert</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-full md:w-1/4 bg-white p-5 rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-64 text-center">
+                            <div className="w-full h-40 bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold text-black">البركة</h3>
+                            <p className="text-gray-500 text-sm">Photography Expert</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-full md:w-1/4 bg-white p-5 rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-64 text-center">
+                            <div className="w-full h-40 bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold text-black">البركة</h3>
+                            <p className="text-gray-500 text-sm">Photography Expert</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-full md:w-1/4 bg-white p-5 rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-64 text-center">
+                            <div className="w-full h-40 bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold text-black">البركة</h3>
+                            <p className="text-gray-500 text-sm">Photography Expert</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-full md:w-1/4 bg-white p-5 rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-64 text-center">
+                            <div className="w-full h-40 bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold text-black">البركة</h3>
+                            <p className="text-gray-500 text-sm">Photography Expert</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-full md:w-1/4 bg-white p-5 rounded-lg shadow-md">
+                        <div className="bg-white shadow-md rounded-2xl p-4 w-64 text-center">
+                            <div className="w-full h-40 bg-black flex items-center justify-center rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s" alt="logo" className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-3 text-lg font-semibold text-black">البركة</h3>
+                            <p className="text-gray-500 text-sm">Photography Expert</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="min-w-[200px] bg-white rounded-2xl  flex flex-col items-center p-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPKCoCDf6fhfN0s_cpotoldgZhVg6rV7QKw&s"
-                        alt="${item.title}" class="mb-4 p-2 h-40 bg-black">
-                    <p class="text-lg font-bold">البركة</p>
-                    <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
-                </div>
+            <div class="flex justify-start mx-2 ">
+            <div class="flex justify-center gap-2 mt-5" id="sliderDots"></div>
+
             </div>
 
 
-
-
-
-
-
+            <div class="flex justify-center gap-2 mt-5">
+                <button class="w-8 h-8 bg-black text-white rounded-md flex items-center justify-center"
+                    id="prevBtn">
+                    <i class="bi bi-chevron-right text-white"></i>
+                </button>
+                <button class="w-8 h-8 bg-black text-white rounded-md flex items-center justify-center"
+                    id="nextBtn">
+                    <i class="bi bi-chevron-left text-white"></i>
+                </button>
+            </div>
         </div>
-        <div class="carousel-controls">
-
-            <button
-                class="carousel-control carousel-control-prev bg-black md:w-8 md:h-8 w-5 flex justify-center items-center rounded  hover:bg-gray-300">
-                <i class="bi bi-chevron-right text-white"></i>
-            </button>
-            <button
-                class="carousel-control carousel-control-next bg-black md:w-8 md:h-8 w-5 flex justify-center items-center rounded  hover:bg-gray-300">
-                <i class="bi bi-chevron-left"></i>
-            </button>
-        </div>
-
-        <div class="carousel-indicators"></div>
     </div>
 
 
 
 
 
-    <!-- <div id="testimonial-section" class="slider_section rtl bg-gray-200  w-full">
-        <div class="container mx-auto px-4 p-5 ">
-            <h2 class="text-2xl font-bold text-start px-5">تعليقات العملاء</h2>
-            <img src="img\Vector 7.png" class="w-30 ms-4" />
-            <p class="text-start text-gray-500 pb-10 px-5 pt-3">
-                تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية لعملائنا
-                الكرام.
-            </p>
-            <div class="relative">
-              
-                <div class="overflow-hidden">
-                    <div id="testimonial-slider" class="flex gap-4 transition-transform duration-500 ease-in-out">
 
-                    </div>
-                </div>
-                
-                <div id="slider-bullets" class="flex justify-center mt-4"></div>
-            </div>
-      
-            <div class="flex justify-center mt-4 text-white">
-                <button id="prev-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
-                    <i class="bi bi-chevron-right text-white"></i>
-
-                </button>
-                <button id="next-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
-                    <i class="bi bi-chevron-left text-white"></i>
-
-                </button>
-            </div>
-        </div>
-    </div> -->
 
 
     <!-- NEW TESTIMONIAL -->
@@ -996,6 +975,86 @@
                     updateCarouselPosition();
                 });
             });
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sliderTrack = document.getElementById('testimonialSlider');
+            const sliderDots = document.getElementById('sliderDots');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            let currentIndex = 0;
+            let itemsPerView = window.innerWidth < 968 ? 1 : 4;
+            const testimonialCards = document.getElementsByClassName('flex-none');
+            const totalSlides = testimonialCards.length;
+
+            // Create dots
+            function createDots() {
+                sliderDots.innerHTML = '';
+                const numberOfDots = Math.ceil(totalSlides / itemsPerView);
+
+                for (let i = 0; i < numberOfDots; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = `w-2.5 h-2.5 rounded-full bg-gray-400 cursor-pointer transition-colors duration-300 ${i === 0 ? 'bg-gray-800' : ''}`;
+                    dot.addEventListener('click', () => goToSlide(i));
+                    sliderDots.appendChild(dot);
+                }
+            }
+
+            function updateSliderPosition() {
+                const offset = currentIndex * (100 / itemsPerView);
+                sliderTrack.style.transform = `translateX(${offset}%)`;
+
+                // Update dots
+                const dots = document.getElementsByClassName('w-2.5');
+                Array.from(dots).forEach((dot, index) => {
+                    dot.classList.toggle('bg-gray-800', index === currentIndex);
+                    dot.classList.toggle('bg-gray-400', index !== currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSliderPosition();
+            }
+
+            function handlePrevious() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSliderPosition();
+                }
+            }
+
+            function handleNext() {
+                const maxIndex = Math.ceil(totalSlides / itemsPerView) - 1;
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateSliderPosition();
+                }
+            }
+
+            function handleResize() {
+                const newItemsPerView = window.innerWidth < 768 ? 1 : 4;
+                if (newItemsPerView !== itemsPerView) {
+                    itemsPerView = newItemsPerView;
+                    currentIndex = 0;
+                    createDots();
+                    updateSliderPosition();
+                }
+            }
+
+            // Event listeners
+            prevBtn.addEventListener('click', handlePrevious);
+            nextBtn.addEventListener('click', handleNext);
+            window.addEventListener('resize', handleResize);
+
+            // Initialize
+            createDots();
+            updateSliderPosition();
         });
     </script>
 
