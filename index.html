@@ -179,64 +179,242 @@
     }
 
     @media (max-width: 992px) {
-            .carousel-item {
-                flex: 0 0 33.333%;
-            }
+        .carousel-item {
+            flex: 0 0 33.333%;
+        }
+    }
+
+    /* For mobile */
+    @media (max-width: 768px) {
+        .carousel-item {
+            flex: 0 0 50%;
         }
 
-        /* For mobile */
-        @media (max-width: 768px) {
-            .carousel-item {
-                flex: 0 0 50%;
-            }
-            .carousel-control {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
+        .carousel-control {
+            padding: 10px 20px;
+            font-size: 14px;
         }
+    }
 
-        /* For small mobile */
-        @media (max-width: 480px) {
-            .carousel-item {
-                flex: 0 0 100%;
-            }
+    /* For small mobile */
+    @media (max-width: 480px) {
+        .carousel-item {
+            flex: 0 0 100%;
         }
+    }
 
 
-.rtl #testimonial-slider {
-  direction: rtl;
-}
+    .rtl #testimonial-slider {
+        direction: rtl;
+    }
 
-.rtl .bi-chevron-left {
-  transform: rotate(180deg); 
-}
-#slider-bullets{
-    display: flex;
+    .rtl .bi-chevron-left {
+        transform: rotate(180deg);
+    }
+
+    #slider-bullets {
+        display: flex;
         justify-content: start;
         margin-top: 20px;
         gap: 8px;
         margin-right: 20px;
-}
+    }
 
 
-#slider-bullets button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  background-color: #ddd;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    #slider-bullets button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-#slider-bullets button.active {
-  background-color: #333;
-}
+    #slider-bullets button.active {
+        background-color: #333;
+    }
 
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        /* Space between images */
+    }
+
+    .image-wrapper img {
+        width: 32%;
+        /* Make sure 3 images fit in one row */
+        border-radius: 8px;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Dots/bullets */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+
+    .review-wrapper {
+        background-color: rgb(229, 231, 235);
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .review-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .review-heading {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: right;
+        padding: 0 20px;
+    }
+
+    .review-intro {
+        color: rgb(107, 114, 128);
+        text-align: right;
+        padding: 12px 20px 40px;
+    }
+
+    .carousel-viewport {
+        position: relative;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 1rem;
+    }
+
+    .review-box {
+        flex: 0 0 300px;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .review-text {
+        margin-bottom: 15px;
+    }
+
+    .reviewer-name {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content:start;
+        gap: 8px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-dot.current {
+        background-color: #333;
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .carousel-button {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-button:hover {
+        background-color: rgb(209, 213, 219);
+    }
 </style>
 
 
-</style>
+
 
 <body dir="rtl">
 
@@ -272,7 +450,7 @@
             <div id="content"
                 class="top-0 bg-red-500 absolute right-0 w-full bg-white space-y-4 p-6 text-lg h-screen  hidden fixed z-20 translate-x-full fixed  z-20">
                 <div class="flex justify-between items-center pb-6">
-                    <h1 class="text-2xl font-semibold">Menu</h1>
+                    <h1 class="text-2xl font-semibold"> البركة</h1>
                     <button onclick="toggleVisibility()"
                         class="w-10 h-10 rounded-full border border-[#212121] flex items-center justify-center"><svg
                             xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24"
@@ -297,22 +475,23 @@
                         </svg>
                     </div>
                     <div class="text-[#212121]  pt-2 ">
-                        <a href="/ai-cloud.html" class="p-2 px-4 w-full block">effyAI Cloud</a>
-                        <a href="/content-cloud.html" class="p-2 px-4 w-full block">effyContent Cloud</a>
-                        <a href="/marketing-cloud.html" class="p-2 px-4 w-full block">effyMarketing Cloud</a>
-                        <a href="/sales-cloud.html" class="p-2 px-4 w-full block">effySales Cloud</a>
-                        <a href="/people-cloud.html" class="p-2 px-4 w-full block">effyPeople Cloud</a>
+
+                        <a href="/ai-cloud.html" class="p-2 px-4 w-full block">الرئيسية</a>
+                        <a href="/content-cloud.html" class="p-2 px-4 w-full block">حول</a>
+                        <a href="/marketing-cloud.html" class="p-2 px-4 w-full block">كرت</a>
+                        <a href="/sales-cloud.html" class="p-2 px-4 w-full block">المدونة </a>
+                        <a href="/people-cloud.html" class="p-2 px-4 w-full block">الاتصال</a>
                     </div>
                 </div>
-               
+
                 <a href="/ai-cloud.html#effyAISuite" class="block">effyAI Suite</a>
                 <a href="/index.html" class="w-full block">Resources</a>
-             
+
                 <a href="/partners-with-effy.html" class="w-full block">Partner with effyBiz</a>
                 <div onclick="toggleVisibility()" class="flex items-center space-x-4 pt-6">
                     <a href="#contactFrom"
-                        class="px-6 py-3 bg-[#212121] hover:bg-neutral-700 transition-all duration-150 rounded-md justify-center items-center w-full  text-center   cursor-pointer text-white font-medium">
-                        Get In Touch
+                        class="px-6 py-2.5  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-center items-center lg:flex hidden cursor-pointer text-[#4E4320] font-medium">
+                        احصل على بطاقتك اليوم
                     </a>
 
                 </div>
@@ -320,7 +499,7 @@
             </div>
 
 
-          
+
         </header>
 
     </header>
@@ -384,7 +563,7 @@
 
     <div
         class="gradient-bg  w-full flex md:flex-row flex-col justify-start md:justify-between place-content-center items-center p-20 relative">
-        <div class="max-w-[400px] text-sm  absolute top-10 md:top-40 right-5 md:left-[50%]">
+        <div class="max-w-[400px]  absolute top-40% left-3/5">
             <h2 class="text-2xl font-bold text-[2A2A]">
                 بطاقة البركة للخصومات
             </h2>
@@ -401,7 +580,7 @@
 
         </div>
         <div class="flex justify-center">
-            <img src="img\imgpsh_fullsize_anim (2).png" class="w-[60%]" />
+            <img src="img\imgpsh_fullsize_anim (2).png" class="w-[100%]" />
 
         </div>
 
@@ -513,20 +692,22 @@
                     <p class="text-gray-500 text-sm mt-2">Photography Expert</p>
                 </div>
             </div>
-         
-          
-         
-        
-           
-         
+
+
+
+
+
+
 
         </div>
         <div class="carousel-controls">
 
-            <button class="carousel-control carousel-control-prev bg-black md:w-8 md:h-8 w-5 flex justify-center items-center rounded  hover:bg-gray-300">
+            <button
+                class="carousel-control carousel-control-prev bg-black md:w-8 md:h-8 w-5 flex justify-center items-center rounded  hover:bg-gray-300">
                 <i class="bi bi-chevron-right text-white"></i>
             </button>
-            <button class="carousel-control carousel-control-next bg-black md:w-8 md:h-8 w-5 flex justify-center items-center rounded  hover:bg-gray-300">
+            <button
+                class="carousel-control carousel-control-next bg-black md:w-8 md:h-8 w-5 flex justify-center items-center rounded  hover:bg-gray-300">
                 <i class="bi bi-chevron-left"></i>
             </button>
         </div>
@@ -536,77 +717,175 @@
 
 
 
-    <!-- slider searction -->
 
-    <!-- <div id="testimonial-section" class="slider_seaction "> 
-        <div class="container mx-auto px-4 bg-gray-200 p-5">
-            <h2 class="text-2xl font-bold text-start  px-5">تعليقات العملاء</h2>
-            <img src="img\Vector 7.png" class="w-30  ms-4" />
 
+    <!-- <div id="testimonial-section" class="slider_section rtl bg-gray-200  w-full">
+        <div class="container mx-auto px-4 p-5 ">
+            <h2 class="text-2xl font-bold text-start px-5">تعليقات العملاء</h2>
+            <img src="img\Vector 7.png" class="w-30 ms-4" />
             <p class="text-start text-gray-500 pb-10 px-5 pt-3">
-                تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية لعملائنا الكرام.
+                تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية لعملائنا
+                الكرام.
             </p>
             <div class="relative">
+              
                 <div class="overflow-hidden">
                     <div id="testimonial-slider" class="flex gap-4 transition-transform duration-500 ease-in-out">
+
                     </div>
                 </div>
-
+                
+                <div id="slider-bullets" class="flex justify-center mt-4"></div>
             </div>
-            <div class=" flex justify-center mt-4 text-white">
-                <button id="next-btn"  class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+      
+            <div class="flex justify-center mt-4 text-white">
+                <button id="prev-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
                     <i class="bi bi-chevron-right text-white"></i>
+
                 </button>
-                <button  id="prev-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
-                    <i class="bi bi-chevron-left"></i>
+                <button id="next-btn" class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300">
+                    <i class="bi bi-chevron-left text-white"></i>
+
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- NEW TESTIMONIAL -->
+
+
+    <div class="review-wrapper">
+        <div class="review-inner">
+            <h2 class="review-heading">تعليقات العملاء</h2>
+            <p class="review-intro">تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية لعملائنا الكرام.</p>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="reviewCarousel">
+                    <div class="review-box">
+                        <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+                            <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+                        </div>
+                        <div class="flex justify-start items-center gap-3">
+                            <img src="https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+                                alt="${t.name}" class="w-14 h-14 rounded-full mb-4" />
+                            <div>
+                                <h3 class="text-lg font-bold reviewer-name">حمد سعيد"</h3>
+                                <p class="text-sm text-gray-400 review-text">ميل لشركة الراحة"</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm">خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل
+                            الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني
+                            جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!</blockquote>
+
+                    </div>
+                    <div class="review-box">
+                        <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start md:w-96 relative">
+                            <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+                        </div>
+                        <div class="flex justify-start items-center gap-3">
+                            <img src="https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+                                alt="${t.name}" class="w-14 h-14 rounded-full mb-4" />
+                            <div>
+                                <h3 class="text-lg font-bold reviewer-name">حمد سعيد"</h3>
+                                <p class="text-sm text-gray-400 review-text">ميل لشركة الراحة"</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm">خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل
+                            الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني
+                            جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!</blockquote>
+                    </div>
+                    <div class="review-box">
+                        <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+                            <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+                        </div>
+                        <div class="flex justify-start items-center gap-3">
+                            <img src="https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+                                alt="${t.name}" class="w-14 h-14 rounded-full mb-4" />
+                            <div>
+                                <h3 class="text-lg font-bold reviewer-name">حمد سعيد"</h3>
+                                <p class="text-sm text-gray-400 review-text">ميل لشركة الراحة"</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm">خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل
+                            الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني
+                            جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!</blockquote>
+                    </div>
+                    <div class="review-box">
+                        <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+                            <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+                        </div>
+                        <div class="flex justify-start items-center gap-3">
+                            <img src="https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+                                alt="${t.name}" class="w-14 h-14 rounded-full mb-4" />
+                            <div>
+                                <h3 class="text-lg font-bold reviewer-name">حمد سعيد"</h3>
+                                <p class="text-sm text-gray-400 review-text">ميل لشركة الراحة"</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm">خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل
+                            الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني
+                            جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!</blockquote>
+                    </div>
+                    <div class="review-box">
+                        <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+                            <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+                        </div>
+                        <div class="flex justify-start items-center gap-3">
+                            <img src="https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+                                alt="${t.name}" class="w-14 h-14 rounded-full mb-4" />
+                            <div>
+                                <h3 class="text-lg font-bold reviewer-name">حمد سعيد"</h3>
+                                <p class="text-sm text-gray-400 review-text">ميل لشركة الراحة"</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm">خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل
+                            الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني
+                            جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!</blockquote>
+                    </div>
+                    <div class="review-box">
+                        <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+                            <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+                        </div>
+                        <div class="flex justify-start items-center gap-3">
+                            <img src="https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp"
+                                alt="${t.name}" class="w-14 h-14 rounded-full mb-4" />
+                            <div>
+                                <h3 class="text-lg font-bold reviewer-name">حمد سعيد"</h3>
+                                <p class="text-sm text-gray-400 review-text">ميل لشركة الراحة"</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm">خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل
+                            الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني
+                            جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!</blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="felx justify-end">
+                <div></div>
+                <div class="carousel-dots " id="carouselDots">
+                    <span class="carousel-dot current"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+
+                </div>
+            </div>
+
+
+
+            <div class="carousel-controls">
+                <button class="carousel-button" id="prevSlide">
+                    <i class="bi bi-chevron-right text-white"></i>
+
+                </button>
+                <button class="carousel-button" id="nextSlide">
+                    <i class="bi bi-chevron-left text-white"></i>
                 </button>
             </div>
         </div>
     </div>
- -->
-
-
-
-
- <div id="testimonial-section" class="slider_section rtl">
-    <div class="container mx-auto px-4 bg-gray-200 p-5">
-      <h2 class="text-2xl font-bold text-start px-5">تعليقات العملاء</h2>
-      <img src="img\Vector 7.png" class="w-30 ms-4" />
-      <p class="text-start text-gray-500 pb-10 px-5 pt-3">
-        تقدم شركة الراحة خدمات متكاملة تساهم في تحقيق تجربة مثالية لعملائنا
-        الكرام.
-      </p>
-      <div class="relative">
-        <!-- Slider Container -->
-        <div class="overflow-hidden">
-          <div
-            id="testimonial-slider"
-            class="flex gap-4 transition-transform duration-500 ease-in-out"
-          ></div>
-        </div>
-        <!-- Bullets -->
-        <div id="slider-bullets" class="flex justify-center mt-4"></div>
-      </div>
-      <!-- Navigation Buttons -->
-      <div class="flex justify-center mt-4 text-white">
-        <button
-          id="prev-btn"
-          class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300"
-        >
-        <i class="bi bi-chevron-right text-white"></i>
-
-        </button>
-        <button
-          id="next-btn"
-          class="bg-black w-8 h-8 rounded mx-2 hover:bg-gray-300"
-        >
-        <i class="bi bi-chevron-left text-white"></i>
-
-        </button>
-      </div>
-    </div>
-  </div>
-  
 
 
 
@@ -674,11 +953,50 @@
     </footer>
 
 
-    
-
 
     <script src="script.js">
 
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselTrack = document.getElementById('reviewCarousel');
+            const navigationDots = document.getElementById('carouselDots').getElementsByClassName('carousel-dot');
+            const previousButton = document.getElementById('prevSlide');
+            const nextButton = document.getElementById('nextSlide');
+
+            let activeSlideIndex = 0;
+            const totalSlides = document.getElementsByClassName('review-box').length;
+            const slideOffset = 300 + 16; // box width + gap
+
+            function updateCarouselPosition() {
+                carouselTrack.style.transform = `translateX(${activeSlideIndex * slideOffset}px)`;
+
+                // Update navigation dots
+                Array.from(navigationDots).forEach((dot, index) => {
+                    dot.classList.toggle('current', index === activeSlideIndex);
+                });
+            }
+
+            previousButton.addEventListener('click', () => {
+                activeSlideIndex = Math.max(activeSlideIndex - 1, 0);
+                updateCarouselPosition();
+            });
+
+            nextButton.addEventListener('click', () => {
+                activeSlideIndex = Math.min(activeSlideIndex + 1, totalSlides - 1);
+                updateCarouselPosition();
+            });
+
+            // Add dot navigation handlers
+            Array.from(navigationDots).forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    activeSlideIndex = index;
+                    updateCarouselPosition();
+                });
+            });
+        });
     </script>
 
 </body>

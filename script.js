@@ -1,53 +1,53 @@
-const testimonials = [
-  {
-    name: "أحمد سعيد",
-    title: "عميل لشركة الراحة",
-    feedback:
-      "خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!",
-    image:
-      "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
-  },
-  {
-    name: "أحمد سعيد",
-    title: "عميل لشركة الراحة",
-    feedback:
-      "شكراً كثيراً لشركة الراحة على الخصومات الرائعة المقدمة، وجعلتم جانبي أفضل بتوفير المال على مستلزماتي اليومية بشكل لا يصدق! شكراً لكم!",
-    image:
-      "https://img-farida-gupta.com/media/catalog/product/full_image/3/_/3_160_149.jpg",
-  },
-  {
-    name: "أحمد سعيد",
-    title: "عميل لشركة الراحة",
-    feedback:
-      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
-    image:
-      "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
-  },
-  {
-    name: "أحمد سعيد",
-    title: "عميل لشركة الراحة",
-    feedback:
-      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
-    image:
-      "https://img-farida-gupta.com/media/catalog/product/full_image/3/_/3_160_149.jpg",
-  },
-  {
-    name: "أحمد سعيد",
-    title: "عميل لشركة الراحة",
-    feedback:
-      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
-    image:
-      "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
-  },
-  {
-    name: "أحمد سعيد",
-    title: "عميل لشركة الراحة",
-    feedback:
-      "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
-    image:
-      "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "أحمد سعيد",
+//     title: "عميل لشركة الراحة",
+//     feedback:
+//       "خدمة الخصومات من شركة الراحة غيّرت حياتي حقاً. بفضل الخصومات السخية والعروض المقدمة، تمكنت من توفير المال وتحقيق احتياجاتي. أشعر بالفخر كوني جزءاً من هذا المجتمع الذي يقدرني اقتصادياً. شكراً كثيراً!",
+//     image:
+//       "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
+//   },
+//   {
+//     name: "أحمد سعيد",
+//     title: "عميل لشركة الراحة",
+//     feedback:
+//       "شكراً كثيراً لشركة الراحة على الخصومات الرائعة المقدمة، وجعلتم جانبي أفضل بتوفير المال على مستلزماتي اليومية بشكل لا يصدق! شكراً لكم!",
+//     image:
+//       "https://img-farida-gupta.com/media/catalog/product/full_image/3/_/3_160_149.jpg",
+//   },
+//   {
+//     name: "أحمد سعيد",
+//     title: "عميل لشركة الراحة",
+//     feedback:
+//       "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+//     image:
+//       "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
+//   },
+//   {
+//     name: "أحمد سعيد",
+//     title: "عميل لشركة الراحة",
+//     feedback:
+//       "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+//     image:
+//       "https://img-farida-gupta.com/media/catalog/product/full_image/3/_/3_160_149.jpg",
+//   },
+//   {
+//     name: "أحمد سعيد",
+//     title: "عميل لشركة الراحة",
+//     feedback:
+//       "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+//     image:
+//       "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
+//   },
+//   {
+//     name: "أحمد سعيد",
+//     title: "عميل لشركة الراحة",
+//     feedback:
+//       "لقد كنت أبحث عن أفضل الحلول الاقتصادية لتوفير حاجاتي اليومية، ووجدت شركة الراحة تقدم كل ذلك وأكثر! شكراً كثيراً لكم!",
+//     image:
+//       "https://cdn.openart.ai/published/hZgAbyInEiazMhZuVjSS/obF0DA49_wCTU_1024.webp",
+//   },
+// ];
 
 const carouselData = [
   {
@@ -168,72 +168,72 @@ const itemsToShow = 3;
 //     .join("");
 // }
 
-function renderTestimonials() {
-  slider.innerHTML = testimonials
-    .map(
-      (t) => `
-      <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
-        <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
-        <div class="flex justify-start items-center gap-3">
-          <img
-            src="${t.image}"
-            alt="${t.name}"
-            class="w-14 h-14 rounded-full mb-4"
-          />
-          <div>
-            <h3 class="text-lg font-bold">${t.name}</h3>
-            <p class="text-sm text-gray-400">${t.title}</p>
-          </div>
-        </div>
-        <blockquote class="text-gray-700 text-sm">${t.feedback}</blockquote>
-      </div>
-    `
-    )
-    .join("");
-    renderBullets();
-}
+// function renderTestimonials() {
+//   slider.innerHTML = testimonials
+//     .map(
+//       (t) => `
+//       <div class="bg-white p-6 rounded-lg flex flex-col items-start text-start w-96 relative">
+//         <i class="fa-solid fa-quote-right absolute text-2xl top-3 left-4 text-[#B9A06A]"></i>
+//         <div class="flex justify-start items-center gap-3">
+//           <img
+//             src="${t.image}"
+//             alt="${t.name}"
+//             class="w-14 h-14 rounded-full mb-4"
+//           />
+//           <div>
+//             <h3 class="text-lg font-bold">${t.name}</h3>
+//             <p class="text-sm text-gray-400">${t.title}</p>
+//           </div>
+//         </div>
+//         <blockquote class="text-gray-700 text-sm">${t.feedback}</blockquote>
+//       </div>
+//     `
+//     )
+//     .join("");
+//     renderBullets();
+// }
 
-function renderBullets() {
-  bulletsContainer.innerHTML = testimonials
-    .map((_, index) => {
-      const isActive = index === currentIndex ? "active" : "";
-      return `<button class="${isActive}" data-index="${index}"></button>`;
-    })
-    .join("");
+// function renderBullets() {
+//   bulletsContainer.innerHTML = testimonials
+//     .map((_, index) => {
+//       const isActive = index === currentIndex ? "active" : "";
+//       return `<button class="${isActive}" data-index="${index}"></button>`;
+//     })
+//     .join("");
 
-  // Add click events for bullets
-  document.querySelectorAll("#slider-bullets button").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      currentIndex = parseInt(e.target.dataset.index, 10);
-      updateSlider();
-    });
-  });
-}
+//   // Add click events for bullets
+//   document.querySelectorAll("#slider-bullets button").forEach((btn) => {
+//     btn.addEventListener("click", (e) => {
+//       currentIndex = parseInt(e.target.dataset.index, 10);
+//       updateSlider();
+//     });
+//   });
+// }
 
-// Update Slider Position
-function updateSlider() {
-  slider.style.transform = `translateX(-${
-    currentIndex * (slider.offsetWidth / testimonials.length)
-  }px)`;
+// // Update Slider Position
+// function updateSlider() {
+//   slider.style.transform = `translateX(-${
+//     currentIndex * (slider.offsetWidth / testimonials.length)
+//   }px)`;
 
-  // Update active bullet
-  renderBullets();
-}
+//   // Update active bullet
+//   renderBullets();
+// }
 
-// Navigation Buttons
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-  updateSlider();
-});
+// // Navigation Buttons
+// prevBtn.addEventListener("click", () => {
+//   currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+//   updateSlider();
+// });
 
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % testimonials.length;
-  updateSlider();
-});
+// nextBtn.addEventListener("click", () => {
+//   currentIndex = (currentIndex + 1) % testimonials.length;
+//   updateSlider();
+// });
 
-// Initialize Slider
-renderTestimonials();
-updateSlider();
+// // Initialize Slider
+// renderTestimonials();
+// updateSlider();
 
 function renderCarousel() {
   const carousel = document.querySelector(".carousel");
@@ -320,3 +320,38 @@ function toggleVisibility() {
   sidebar.classList.toggle("hidden");
   sidebar.classList.toggle("translate-x-full"); // Toggle translate-x-full to slide it in
 }
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+
+
+
+
