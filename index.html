@@ -105,6 +105,39 @@
             transform: translateX(-100%);
         }
     }
+
+    .heading {
+        font-family: 'Beiruti';
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 36px;
+
+    }
+
+    .sub-heading {
+        font-family: 'Beiruti';
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 36px;
+
+    }
+
+    .description {
+        font-family: 'Beiruti';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+
+
+    }
+
+    .button-text {
+        font-family: 'Beiruti';
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+
+    }
 </style>
 
 
@@ -117,7 +150,7 @@
             <a href="/index.html" class="2xl:text-3xl text-[1.9rem] text-2xl font-black text-[#000] skipTranslation">
                 البركة
             </a>
-            <button id="toggleBtn" onclick="toggleDirection()" class="px-6 py-1  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-start items-center lg:flex  cursor-pointer text-[#4E4320] font-medium">Eng</button>
+       
 
             <nav class="lg:flex hidden flex-row gap-6 items-center text-lg ">
                 <a href="/index.html" class="text-[#B9A06A] font-semibold px-4">الرئيسية</a>
@@ -126,7 +159,10 @@
                 <a href="/index.html" class="px-4">المدونة</a>
                 <a href="/partners-with-effy.html" class="px-4">الاتصال</a>
             </nav>
+         
             <div class="flex items-center space-x-4">
+                <button id="toggleBtn" onclick="toggleDirection()"
+                class="px-6 py-1  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-start items-center lg:flex  cursor-pointer text-[#4E4320] font-medium">Eng</button>
                 <a href="#contactFrom"
                     class="px-6 py-2.5  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-center items-center lg:flex hidden cursor-pointer text-[#4E4320] font-medium">
                     احصل على بطاقتك اليوم
@@ -144,7 +180,7 @@
             </div>
             <div id="content"
                 class="top-0  absolute right-0 w-full bg-white space-y-4 p-6 text-lg h-screen  hidden fixed z-[9999] translate-x-full fixed  z-20">
-            
+
                 <div class="flex justify-between items-center pb-6">
                     <h1 class="text-2xl font-semibold"> البركة</h1>
                     <button onclick="toggleVisibility()"
@@ -297,7 +333,38 @@
 
 
     <!-- section 2 -->
-    <div class="bg-linear-to-b from-[#B9A06A]/30 to-[#413620]/30   ">
+
+    <div class="block md:hidden bg-[#FFFFFF] ">
+        <div class="mx-auto max-w-[90%] py-10">
+            <img src="img/cart 2 1.png" />
+        </div>
+        <div class="bg-[#FFFAF5] w-full py-10">
+            <div class="max-w-[90%] mx-auto">
+                <div class="w-full z-10 space-y-4">
+                    <h2 class="text-4xl font-bold text-[#2A2A2A] heading">
+                        بطاقة البركة للخصومات
+                    </h2>
+                    <p class=" text-[4A4A4A] text-lg max-w-xl description">
+                        طريقك إلى النجاح المالي بين يديك استمتع بخصومات مذهلة وعروض حصرية مع
+                        خدمة البركة للخصومات واستفد من إدارة أفضل لمصاريفك.
+                    </p>
+                    <div class="p-2">
+                        <button
+                            class="px-7 py-2 rounded border border-[#000000] text-[#2A2A2A] text-lg font-semibold button-text">
+                            اشترك الان
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="bg-linear-to-b from-[#B9A06A]/30 to-[#413620]/30 hidden md:block ">
         <div
             class="mx-auto px-4 md:px-10 2xl:px-0 w-full overflow-hidden xl:container flex flex-row items-center py-20 relative  ">
             <div class="w-full z-10 space-y-4">
@@ -330,8 +397,48 @@
 
     </div>
 
+    <div class="block md:hidden">
+        <div class="img-seaction">
+            <img src="img/pexels-kampus-8422670 1 (1).png" />
+        </div>
+        <div class="bg-[#FFFAF5]">
+            <div class="mx-auto px-4  w-full overflow-hidden flex my-auto ">
+                <div
+                    class="text-white  flex lg:flex-row flex-col-reverse  justify-center items-center gap-12 xl:py-16 py-10  ">
+
+                    <div class="space-y-6  w-full">
+                        <div>
+                            <h2
+                                class="text-[#06241B] 2xl:text-5xl 2xl:leading-[4rem] lg:text-4xl lg:leading-[3rem]  leading-[2.5rem] text-3xl font-bold heading  ">
+                                بطاقة البركة
+                            </h2>
+
+                            <p class="text-[#06241B] md:text-2xl text-base">
+                                توفير واستفادة لكل متقاعد، لأن البركة فيكم وتستحقون الأفضل</p>
+                        </div>
+                        <p class="text-[#06241B] md:text-2xl text-base description">
+                            التوفير الذي تستحقه عش حياتك بكل رفاهية واستمتع بخصومات تصل إلى %
+                            على المنتجات والخدمات التي تحبها لأن البركة فيكم، نستثمر في راحة بالكم،
+                            استفدوا من خدمات حصرية وعروض لا تُفوَّت<br><span class="text-[#01A171]">لا تفوِّت فرصة
+                                التوفير
+                                والتمتع بالحياة</span>
+                        </p>
+                        <p class="text-[#BAA26E] md:text-2xl text-base font-semibold  underline sub-heading">
+                            احصل على بطاقة البركة اليوم!
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
     <!-- section 3 -->
-    <div class="flex flex-col  backgroundImage h-[50rem]">
+    <div class="flex flex-col  backgroundImage h-[50rem] hidden md:block">
         <div class="mx-auto px-4 md:px-10 2xl:px-0 w-full overflow-hidden xl:container flex my-auto ">
             <div
                 class="text-white w-6/12 flex lg:flex-row flex-col-reverse  justify-center items-center gap-12 xl:py-16 py-10  ">
@@ -628,21 +735,21 @@
                     <li>Email: example@mail.com</li>
                 </ul>
                 <div class="flex  gap-2 rtl:space-x-reverse">
-                    <a href="#" class="w-7 flex justify-center items-center h-7 bg-[#d6cdb4] rounded"><i
-                            class="fa-brands fa-behance"></i></a>
-                    <a href="#" class="w-7 flex justify-center items-center h-7 bg-[#d6cdb4] rounded"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-7 flex justify-center items-center h-7 bg-[#d6cdb4] rounded"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="w-7 flex justify-center items-center h-7 bg-[#d6cdb4] rounded"><i
-                            class="fa-solid fa-globe"></i></a>
-                    <a href="#" class="w-7 flex justify-center items-center h-7 bg-[#d6cdb4] rounded"><i
-                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-[48px] h-[48px] flex justify-center items-center  bg-[#d6cdb4] rounded"><i
+                            class="fa-brands fa-behance text-lg"></i></a>
+                    <a href="#" class="w-[48px] h-[48px] flex justify-center items-center bg-[#d6cdb4] rounded"><i
+                            class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="#" class="w-[48px] h-[48px] flex justify-center items-center bg-[#d6cdb4] rounded"><i
+                            class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="w-[48px] h-[48px] flex justify-center items-center bg-[#d6cdb4] rounded"><i
+                            class="fa-solid fa-globe text-lg"></i></a>
+                    <a href="#" class="w-[48px] h-[48px] flex justify-center items-center bg-[#d6cdb4] rounded"><i
+                            class="fa-brands fa-facebook-f text-lg"></i></a>
                 </div>
             </div>
 
             <!-- Explore Section -->
-            <div>
+            <div class="hidden md:block">
                 <h3 class="text-lg font-bold mb-4">استكشف</h3>
                 <ul class="space-y-2 text-sm text-gray-600">
                     <li><a href="#" class="hover:underline">الرئيسية</a></li>
@@ -654,7 +761,7 @@
             </div>
 
             <!-- Partners Section -->
-            <div>
+            <div class="hidden md:block">
                 <h3 class="text-lg font-bold mb-4">الشركاء</h3>
                 <ul class="space-y-2 text-sm text-gray-600 ">
                     <li><a href="#" class="hover:underline">Xcite</a></li>
