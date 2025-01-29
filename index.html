@@ -127,7 +127,14 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 23px;
+    }
 
+    .star-text {
+        font-family: 'Beiruti';
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 28px;
+       
 
     }
 
@@ -138,6 +145,30 @@
         line-height: 36px;
 
     }
+
+    .header-heading {
+        font-family: "Public Sans";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0.002em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+    }
+
+    .header-button {
+        font-family: "Beiruti";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        text-align: right;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+    }
 </style>
 
 
@@ -145,12 +176,13 @@
 
 <body dir="rtl">
 
-    <header class=" sticky bg-white w-full top-0 z-20 transition duration-300 ease-in-out h-20 shadow-sm">
+    <header
+        class=" sticky bg-[#BCA470] md:bg-white w-full top-0 z-20 transition duration-300 ease-in-out h-20  md:shadow-sm">
         <header class="flex justify-between items-center h-20 mx-auto px-4 md:px-10 2xl:px-0 w-full  xl:container ">
             <a href="/index.html" class="2xl:text-3xl text-[1.9rem] text-2xl font-black text-[#000] skipTranslation">
                 البركة
             </a>
-       
+
 
             <nav class="lg:flex hidden flex-row gap-6 items-center text-lg ">
                 <a href="/index.html" class="text-[#B9A06A] font-semibold px-4">الرئيسية</a>
@@ -159,10 +191,10 @@
                 <a href="/index.html" class="px-4">المدونة</a>
                 <a href="/partners-with-effy.html" class="px-4">الاتصال</a>
             </nav>
-         
+
             <div class="flex items-center space-x-4">
                 <button id="toggleBtn" onclick="toggleDirection()"
-                class="px-6 py-1  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-start items-center lg:flex  cursor-pointer text-[#4E4320] font-medium">Eng</button>
+                    class="px-6 py-1  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-start items-center lg:flex  cursor-pointer text-[#4E4320] font-medium">Eng</button>
                 <a href="#contactFrom"
                     class="px-6 py-2.5  border hover:text-white hover:border-black hover:bg-black transition-all duration-150 rounded-full justify-center items-center lg:flex hidden cursor-pointer text-[#4E4320] font-medium">
                     احصل على بطاقتك اليوم
@@ -236,7 +268,41 @@
 
     </header>
 
-    <div class="flex flex-col bg-[#FFFAF5]  ">
+    <div class="block md:hidden">
+        <div class="flex flex-col justify-center items-center bg-[#BCA470] py-">
+            <img src="img\cart paraka 1.png" width="60%" />
+            <div class="flex-col mt-3">
+                <img src="img\Sparkle.png" />
+            </div>
+            <p class="text-[#444343] header-heading py-4">
+                البداية نحو التوفير
+            </p>
+        </div>
+        <div class="bg-[#FFFAF5] p-3">
+            <div class="flex  flex-col justify-center items-center space-y-5">
+                <button
+                    class="bg-[#444343] text-[#FFFFFFB8] mt-4 flex justify-center items-center w-[239px] h-[52px] rounded-full header-button">
+                    احصل على بطاقتك اليوم
+                </button>
+                <h2 class="text-[#06241B] heading text-center">
+                    مرحبًا بكم في عالم التوفير مع بطاقة
+                    البركة
+                </h2>
+                <p class="description text-[#06241B] text-center  ">
+                    استمتع بخصومات تصل إلى 50% على منتجاتك المفضلة والمزيد.
+                    عايش تجربتك الحياتية بكل أريحية واستفد من أكبر خصومات السوق.
+                </p>
+                <div class="bg-[#FFFFFF] flex justify-center items-center p-2 rounded pb-8">
+                    <span class="star-text text-[#52565C] pe-2"> 5.0 rating </span>
+                    <span class="bg-[#E9F8F3] px-1 rounded">
+                        <i class="fa-solid fa-star text-[#FFC27A]"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col bg-[#FFFAF5]  hidden md:block ">
         <div class="mx-auto px-4 md:px-10 2xl:px-0 w-full overflow-hidden xl:container ">
             <div
                 class="text-white w-full flex lg:flex-row flex-col-reverse  justify-center items-center gap-12 xl:py-16 py-10 ">
